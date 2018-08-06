@@ -1,0 +1,240 @@
+.realisation {
+    
+    #mockup {
+        grid-column: 3 / 6;
+        grid-row: 3 / 7;
+        margin: 0 auto;
+        width: 100%;
+
+        .topbar {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(214, 214, 214);
+            position: relative;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .topleft {
+                display: flex;
+                flex-flow: nowrap;
+                align-items: center;
+
+                .size {
+                    width: 50px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 10px;
+    
+                    .circle {
+                        width: 11px;
+                        height: 11px;
+                        border-radius: 50%;
+                        position: relative;
+                        background-color: #fff;
+    
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+    
+                .navigation {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 10px;
+
+                    p {
+                        width: 20px;
+                        height: 20px;
+                        background-color: #fff;
+                        color: lightgray;
+                        text-align: center;
+                        display: inline-block;
+                        line-height: 20px;
+                        margin: 0 1px;
+                        font-size: 1.5rem;
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            .topcenter {
+                width: 50%;
+                height: 20px;
+                border-radius: 3px;
+                background-color: white;
+                text-align: center;
+                line-height: 20px;
+                color: gray;
+                font-size: 1.2rem;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    content: "\21BB";
+                    display: block;
+                    top: -3px;
+                    right: 5px;
+                    font-size: 2.3rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .topright {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .rect {
+                    width: 30px;
+                    height: 20px;
+                    background-color: #fff;
+                    border-radius: 3px;
+                    text-align: center;
+                    display: inline-block;
+                    margin: 0 2px;
+
+                    img {
+                        height: 15px;
+                    }
+                }
+
+                .newtab {
+                    align-self: end;
+                    color: darkgray;
+                    width: 20px;
+                    height: 20px;
+                    background-color: gray;
+                    margin-left: 5px;
+                    padding: 0 5px;
+                }
+            }
+        }
+
+        .mockup_iframe {
+            width: 100%;
+            height: calc(100% - 30px);
+            background-color: #fff;
+            overflow: hidden;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .responsive {
+        grid-column: 6 / 7;
+        grid-row: 3 / 4;
+        justify-self: center;
+
+        button {
+            width: 50px;
+            display: block;
+            cursor: pointer;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    #selection {
+        grid-column: 7 / 8;
+        grid-row: 3 / 7;
+
+        .liste {
+            margin-right: 25%;
+            align-items: end;
+
+            li {
+                .rond {
+                    a {
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .liens {
+        grid-column: 3 / 6;
+        grid-row: 7 / 8;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-self: center;
+
+        a {
+            display: inline-block;
+            padding: 7px 20px;
+            border-radius: 30px;
+            background-color: $rouge;
+            color: white;
+            text-transform: uppercase;
+            border: 2px solid $rouge;
+            transition: all .3s;
+
+            &:hover {
+                background-color: #fff;
+                color: $rouge;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 768px) {
+    .realisation {
+        #choix {
+            display: none;
+        }
+    }
+}
+
+@media screen and(max-width: 568px) {
+    .realisation {
+        .titre {
+            align-self: center;
+        }
+        #mockup {
+            .topbar {
+                .topleft {
+                    display: none;
+                }
+                .topcenter {
+                    margin: 0 auto;
+                    width: 85%;
+                    &::after{
+                        top: 0;
+                        font-size: 1.5rem;
+                    }
+                }
+                .topright {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 440px) {
+    .realisation {
+        .liens {
+            grid-column: 1 / 8;
+        }
+    }
+}

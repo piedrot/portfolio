@@ -1,0 +1,171 @@
+#projet {
+    header {
+        background-color: rgba(0, 0, 0, .9);
+        max-width: unset;
+        padding: 5px 0;
+            .headbox {
+                max-width: 2100px;
+                margin: 0 auto;
+            }
+        
+    }
+    
+
+    .projet_top {
+        .grille_projet_top {
+            display: grid;
+            grid-template-columns: minmax(50px, 1fr) minmax(300px,3fr) minmax(50px, .5fr) minmax(300px, 3.5fr) minmax(50px, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-areas:    ". . . . ."
+                                    ". . . . ."
+                                    ". h1 h1 h1 h1"
+                                    ". h2 h2 . . "
+                                    ". prestext . photohead ."
+                                    ". prestext . photohead ."
+                                    ". prestext . photohead ."
+                                    ". . . . .";
+            width: 100%;
+            height: 100vh;
+            max-width: 2100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+
+        h1 {
+            grid-area: h1;
+            font-size: 5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $rouge;
+            width: 100%;
+            align-self: center;
+        }
+
+        h2 {
+            grid-area: h2;
+            font-size: 3rem;
+            color: $rouge;
+            text-indent: unset;
+            font-weight: normal;
+            align-self: center;
+        }
+
+        .pres_text {
+            grid-area: prestext;
+        }
+
+        .photo_head {
+            grid-area: photohead;
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    .background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+   .projet {
+       color: black;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-gap: 100px 5%;
+       padding: 0 5%;
+       margin: 100px auto 0;
+       max-width: 2100px;
+
+
+       .projet_photo {
+           //grid-area: projetphoto;
+            img {
+                width: 100%;
+                //max-height: 100%;
+            }
+       }
+
+       .projet_text {
+           //grid-area: projettext;
+           h2 {
+               text-indent: unset;
+               color: $rouge;
+               margin-bottom: 20px;
+               font-size: 2.5rem;
+               margin-top: 80px;
+               &:first-child {
+                margin-top: -56px;
+               }
+           }
+           p {
+               margin-bottom: 10px;
+           }
+       }
+   }
+
+   footer {
+       background-color: black;
+       max-width: 2100px;
+       display: flex;
+       justify-content: space-between;
+       padding: 10px 2.5%;
+       margin: 0 auto;
+   }
+
+}
+
+
+@media screen and(max-width: 768px){
+    #projet {
+        .projet_top {
+            .grille_projet_top {
+                grid-template-columns: 1fr 3fr .5fr 3.5fr 1fr;
+                grid-template-areas:    ". . . . ."
+                                        ". . . . ."
+                                        ". h1 . photohead ."
+                                        ". h2 h2 photohead ."
+                                        ". prestext prestext prestext ."
+                                        ". prestext prestext prestext ."
+                                        ". prestext prestext prestext ."
+                                        ". . . . .";
+                h1 {
+                    font-size: 3rem;
+                }
+                h2 {
+                    font-size: 2.5rem;
+                }
+                .pres_text {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:568px) {
+    #projet {
+        header {
+            .conteneur-svg {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 440px){
+    #projet {
+        .projet_top {
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portfolio de Pierre Grreillet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="projet">
+
+    <header>
+        <div class="headbox">
+            <a href="index.html"><h1>Pierre Greillet</h1></a>
+
+            <div class="conteneur-svg">
+
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="60" width="320" />
+                    <div class="text">Intégrateur Jr</div>
+                </svg>
+
+            </div>
+
+            <div class="contact" onclick="contactf()">
+
+                <button></button>
+
+                <a href="tel:0671713379" class="phone"></a>
+
+                <a href="mailto:pierre.greillet@outlook.fr" class="mail"></a>
+
+                <a href="/files/cv.pdf" class="cv"></a>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="projet_top">
+
+        <div class="background"></div>
+
+        <div class="grille_projet_top">
+
+            <h1>Prety Events</h1>
+
+            <h2>/ Présentation</h2>
+
+            <div class="pres_text">
+            <p>Prety Events est une jeune agence de conception et d'organisation de mariages qui cherche a mettre en place un site vitrine pour leur activité.</p>
+            <p>L'agence a fait appel à Christelle Maître pour gérer le projet, le design et à Badak pour l'intégration et le développement WordPress.</p>
+            <p>Au début de l'intégration,, il manquait certaine déclinaison de page mais les principales étaient en place.</p>
+            </div>
+
+            <div class="photo_head">
+                <img src="img/prety_logo.jpg" alt="Logo du site Prety Events">
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="projet">
+
+        <div class="projet_photo">
+            <img src="img/prety_home.jpg" alt="Capture d'écran de l'accueil du site">
+        </div>
+
+        <div class="projet_text">
+            <h2>/ Préparation</h2>
+            <p>La consigne principale pour le développement de ce site a été de garder en tête le côté homothétique du design, les cases et le contenu doivent pouvoir grandir et rétrécir en gardant leurs proportions.</p>
+            <p>Ensuite, sur la page d'accueil, les clients devaient pouvoir modifier l'ordre des cases à leur souhait.</p>
+            <p>Enfin les cases des pages de prestations devaient elles aussi pouvoir être modifier, en changeant le contenu (Descriptif, Titre, Photos, Vidéos, Menus...)</p>
+            <h2>/ Intégration</h2>
+            <p>Après avoir étudier les contraintes, j'ai pris le parti d'utiliser css grid, pour sa facilité à déclarer un template en lignes et colonnes.</p>
+            <p>Pour la page d'accueil, j'ai fais fais un template de 3 colonnes de 1fr avec des lignes auto de tailles équivalentes à 21vw et des goutières à 2.4vw.</p>
+            <p>Pour garder au mieux le coté homothétique, la taille des titres et des textes est aussi gérer en utilisant les unités vw.</p>
+        </div>
+
+        <div class="projet_photo">
+            <img src="img/prety_presta.jpg" alt="Capture d'écran de l'accueil du site">
+        </div>
+
+        <div class="projet_text">
+            <h2>/ Difficultés</h2>
+            <p>Pour gérer le texte de la section descriptif et éviter que celui-ci ne déborde, j'ai aussi utilisé les unités vw, tout en réduisant la hauteur de ligne prévu au départ.</p>
+            <p>Dans l'ensemble, beaucoup de media queries ont été nécessaires pour gérer le coté modulable de ce template.</p>
+            <p>Enfin les cases des pages de prestations devaient elles aussi pouvoir être modifier, en changeant le contenu (Descriptif, Titre, Photos, Vidéos, Menus...)</p>
+        </div>
+
+        <div class="projet_photo">
+            <img src="img/prety_pierre.jpg" alt="Capture d'écran de l'accueil du site">
+        </div>
+
+        <div class="projet_text">
+            <h2>/ Qui sommes-nous</h2>
+            <p>La dernière page que Christèle nous a envoyé avant la fin de mon stage concerne la présentation de l'équipe, celle-ci présente un design complétement différent des autres pages et vient du site Tympanus</p>
+            <p>Pour répondre à une contrainte de temps, je suis parti de la page de demo fournit, que j'ai adapté à nos besoins et à celui du design légérement modifié par Christèle.</p>
+            <p>La particularité de cette page est la présentation des membres eux-même qui utilise grid pour le prositionnement des photos, titres, textes. C'est un avantage car il a permis de facilement adapter les modifications apportées par Christèle.</p>
+        </div>
+
+    </div>
+
+    <a href="http://pgreillet.cefim.co/prety/index.php" class="visiter">Visiter le site</a>
+
+    <footer>
+        <a href="#">Mentions Légales</a>
+        <p>2018</p>
+    </footer>
+        
+    <script type="text/javascript" src="js/contactf.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1063px" height="890px" viewBox="0 0 1063 890" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tablet" transform="translate(-165.000000, -125.000000)" fill="#FF0000">
+            <path d="M645,129 C830,129 807,229 838,309 C869,389 1161,306 1209,486 C1257,666 1203,862 1159,862 C1115,862 911,874 796,899 C681,924 449,1015 337,1015 C225,1015 134,867 175,669 C216,471 110,500 223,293 C336,86 460,129 645,129 Z" id="Path-2"></path>
+        </g>
+    </g>
+</svg>

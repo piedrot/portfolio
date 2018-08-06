@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portfolio de Pierre Grreillet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://use.fontawesome.com/860928c613.js"></script> -->
+</head>
+<body>
+
+    <div class="background"></div>
+    
+    <header>
+        <div class="headbox">
+            <a href="index.html"><h1>Pierre Greillet</h1></a>
+
+            <div class="conteneur-svg">
+
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="60" width="320" />
+                    <div class="text">Intégrateur Jr</div>
+                </svg>
+
+            </div>
+
+            <div class="contact" onclick="contactf()">
+
+                <button></button>
+
+                <a href="tel:0671713379" class="phone"></a>
+
+                <a href="mailto:pierre.greillet@outlook.fr" class="mail"></a>
+
+                <a href="/files/cv.pdf" class="cv"></a>
+
+            </div>
+        </div>
+    </header>
+        
+    <nav>
+        <ul class="liste" id="menu">
+            <li data-menuanchor="firstPage"><div class="rond"><a href="#firstPage"></a></div></li>
+            <li data-menuanchor="secondPage"><div class="rond"><a href="#secondPage"></a></div></li>
+            <li data-menuanchor="3rdPage"><div class="rond"><a href="#3rdPage"></a></div></li>
+            <li data-menuanchor="lastPage"><div class="rond"><a href="#lastPage"></a></div></li>
+        </ul>
+    </nav>
+
+    <div id="fullpage">
+
+            <!-- <svg id="morphing" width="1009px" height="812px" viewBox="0 0 1009 812">
+                <style type="text/css">
+                    .polymorph{fill:#FF1717;}
+                </style>
+                <path class="polymorph" d="M645,129 C830,129 931,239 962,319 C993,399 1111,456 1159,636 C1207,816 1113,941 1069,941 C1025,941 712,801 597,826 C482,851 440,941 328,941 C216,941 134,867 175,669 C216,471 295,584 408,377 C521,170 460,129 645,129Z"/>
+        </svg> -->
+
+        <section class="home grille section" data-target="home1" data-anchor="firstPage">
+
+            <h2>Home</h2>
+
+            <div class="titre">
+                <img src="img/home.svg" alt="Icone du titre Home">
+            </div>
+
+            <!-- <nav>
+                <ul class="liste">
+                    <li><div class="rond"><a href="#home"></a></div></li>
+                    <li><div class="rond"><a href="#realisation"></a></div></li>
+                    <li><div class="rond"><a href="#xp"></a></div></li>
+                    <li><div class="rond"><a href="#about"></a></div></li>
+                </ul>
+            </nav> -->
+
+            <div class="point">
+                
+                <div class="point-rouge">
+
+                    <img class="cheouv" src="img/chevron_ouvrant.svg" alt="Icone d'un chevron ouvrant">
+                    <img class="chefer" src="img/chevron_fermant.svg" alt="Icone d'un chevron fermant">
+
+                </div>
+
+                
+
+                <!-- <span class="chevron_ouvrant"><</span>
+                <span class="chevron_fermant">/></span> -->
+                
+            </div>
+
+            <div class="scroll"></div>
+            <p class="scrolldown">Scroll Down</p>
+
+        </section>
+
+
+        <section class="realisation grille section" data-target="realisation1" data-anchor="secondPage">
+            
+            <h2>Realisations</h2>
+
+            <div class="titre">
+                <img src="img/realisation.svg" alt="Icone du titre Realisation">
+            </div>
+
+            <div id="mockup">
+
+                <div class="topbar">
+                    <div class="topleft">
+                        <div class="size">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="navigation">
+                            <p><</p>
+                            <p>></p>
+                        </div>
+                        <div class="bookmark"></div>
+                    </div>
+
+                    <div class="topcenter">
+                        <p id="navtext">google.com</p>
+                    </div>
+                    
+                    <div class="topright">
+                        <div class="rect">
+                            <img src="img/share.svg" alt="Icone de partage">
+                        </div>
+                        <div class="rect">
+                            <img src="img/tabs.svg" alt="Icone de tabs">
+                        </div>
+                        <div class="newtab">+</div>
+                    </div>
+                </div>
+
+                <div class="mockup_iframe">
+                    <iframe src="http://localhost:8888/Tereygol/" frameborder="0" id="iframe"></iframe>
+                </div>
+            </div>
+
+            <div class="responsive" id="choix">
+                <button id="desktop"><img src="img/desktop.svg" alt="Icone de Desktop"></button>
+                <button id="mobile"><img src="img/mobile.svg" alt="Icone de Mobile"></button>
+            </div>
+
+            <div id="selection">
+                <ul id="selecteur" class="liste">
+                    <li><div class="rond"><a href="#" data-target="http://mbrault.cefim.co/" data-anchors="projet1.html" data-attr="Palo Altours"></a></div></li>
+                    <li><div class="rond"><a href="#" data-target="https://www.marcalexandre-avocat.fr/" data-anchors="projet2.html" data-attr="Marc Alexandre"></a></div></li>
+                    <li><div class="rond"><a href="#" data-target="http://s733729003.onlinehome.fr/" data-anchors="projet3.html" data-attr="CFA MFEO Sorigny"></a></div></li>
+                    <li><div class="rond"><a href="#" data-target="https://corail.badak.fr" data-anchors="projet4.html" data-attr="Corail"></a></div></li>
+                    <li><div class="rond"><a href="#" data-target="http://pgreillet.cefim.co/tereygeol/index.html" data-anchors="projet5.html" data-attr="Tereygeol"></a></div></li>
+                    <li><div class="rond"><a href="#" data-target="http://pgreillet.cefim.co/prety/" data-anchors="projet6.html" data-attr="Prety Events"></a></div></li>
+                </ul>
+            </div>
+
+            <div class="liens">
+
+                <a href="#" id="portfolio">Présentation</a>
+
+                <a href="#" id="visite" target="_blank">Visite</a>
+
+            </div>
+
+        </section>
+
+
+        <section class="xp grille section" data-target="xp1" data-anchor="3rdPage">
+
+            <h2>Expérience</h2>
+
+            <div class="titre">
+                <img src="img/experience.svg" alt="Icone du titre Experience">
+            </div>
+
+            <div class="presentation">
+                <ul id="presxp">
+                    <li>
+                        <article>
+
+                            <div class="entete">
+                                <div class="agence">
+                                    <h3>Badak</h3>
+                                    <p>2018</p>
+                                </div>
+                                <p>Tours</p>
+                            </div>
+
+                            <div class="entreprise">
+                                <p>Agence de communication numérique</p>
+                            </div>
+
+                            <div class="poste">
+                                <p>Développement de site sous html et css et intégration sous WordPress.Usage de JS</p>
+                            </div>
+
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+
+                                <div class="entete">
+                                    <div class="agence">
+                                        <h3>CEFIM</h3>
+                                        <p>2018</p>
+                                    </div>
+                                    <p>Tours</p>
+                                </div>
+        
+                                <div class="entreprise">
+                                    <p>Centre de Formation dédié aux métiers du numérique</p>
+                                </div>
+        
+                                <div class="poste">
+                                    <p>Projet de refonte du site du CFA de Sorigny dans le cadre de la formation Designer Web.</p>
+                                </div>
+        
+                            </article>
+                    </li>
+
+                    <li>
+                        <article>
+
+                                <div class="entete">
+                                    <div class="agence">
+                                        <h3>Boulanger</h3>
+                                        <p>2016</p>
+                                    </div>
+                                    <p>Chambray-les-Tours</p>
+                                </div>
+        
+                                <div class="entreprise">
+                                    <p>Magasin d'éléctrodomestique</p>
+                                </div>
+        
+                                <div class="poste">
+                                    <p>Accueil et gestion des retours et produits défectueux.</p>
+                                </div>
+        
+                            </article>
+                    </li>
+
+                    <li>
+                        <article>
+
+                                <div class="entete">
+                                    <div class="agence">
+                                        <h3>Boulanger</h3>
+                                        <p>2011</p>
+                                    </div>
+                                    <p>Saint-Pierre-des-Corps</p>
+                                </div>
+        
+                                <div class="entreprise">
+                                    <p>Magasin d'éléctrodomestique</p>
+                                </div>
+        
+                                <div class="poste">
+                                    <p>Conseil et vente de produits/services multimédia</p>
+                                </div>
+        
+                            </article>
+                    </li>
+
+                    <li>
+                        <article>
+
+                                <div class="entete">
+                                    <div class="agence">
+                                        <h3>Boulanger</h3>
+                                        <p>2011</p>
+                                    </div>
+                                    <p>Saint-Pierre-des-Corps</p>
+                                </div>
+        
+                                <div class="entreprise">
+                                    <p>Magasin d'éléctrodomestique</p>
+                                </div>
+        
+                                <div class="poste">
+                                    <p>Conseil et vente de produits/services Photo et Vidéo</p>
+                                </div>
+        
+                            </article>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <div id="selector">
+                <ul id="selectxp" class="liste">
+                    <li class="selecactive">
+                        <div class="rond">
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rond">
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rond">
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rond">
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="rond">
+                            <a href="#"></a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <ul id="xptitre">
+                <li><p>Stage d'intégrateur</p></li>
+                <li><p>Projet de refonte du site du CFA de Sorigny</p></li>
+                <li><p>Conseiller Service Client SAV</p></li>
+                <li><p>Vendeur conseil Multimedia</p></li>
+                <li><p>Vendeur conseil Photo</p></li>
+            </ul>
+
+        </section>
+
+
+        <section class="about grille section" data-target="about1" data-anchor="lastPage">
+
+            <h2>A propos</h2>
+
+            <div class="titre">
+                <img src="img/apropos.svg" alt="Icone du titre A Propos">
+            </div>
+
+            <p>
+                Hello, merci d'avoir pris le temps de regarder ce site!</br>
+            
+
+            
+                C'est un essai, il n'a pas vocation à être mis en ligne, mais sert de base pour tester la technologie Grid et l'usage de scripts JS fait maison avec amour.</br>
+            
+
+            
+                Loin d'être parfait, j'ai essayé de gérer la partie responsive de la manière la plus simple et en utilisant le moins de media queries.
+            </p>
+            
+            <footer>
+                <a href="#">Mentions Légales</a>
+                <p>2018</p>
+            </footer>
+
+        </section>
+
+        
+        <script type="text/javascript" src="js/contactf.js"></script>
+        <script type="text/javascript" src="js/selecteur.js"></script>
+        <!-- <script type="text/javascript" src="js/anime.js"></script> -->
+        <script src="js/javascript.fullPage.min.js"></script>
+
+        <script type="text/javascript">
+            fullpage.initialize('#fullpage', {
+                anchors: ['firstPage', 'secondPage', '3rdPage', 'lastPage'],
+                menu: '#menu',
+            });
+        </script>
+
+        <script>
+
+            // var morph = anime({
+            // targets: '#morphing .polymorph',
+            // d: 'M645,129 C830,129 807,229 838,309 C869,389 1161,306 1209,486 C1257,666 1203,862 1159,862 C1115,862 911,874 796,899 C681,924 449,1015 337,1015 C225,1015 134,867 175,669 C216,471 110,500 223,293 C336,86 460,129 645,129 Z',
+            // easing: 'easeOutQuad',
+            // duration: 2000,
+            // loop: true,
+            // direction: 'alternate',
+            // });
+
+            // var morph1 = anime({
+            // targets: '.poly1',
+            // d: 'M619.165411,47.9396883 C804.165411,47.9396883 829.900004,122.696673 860.900004,202.696673 C891.900004,282.696673 1097.30366,271.430592 1145.30366,451.430592 C1193.30366,631.430592 1127.68093,834.517579 1083.68093,834.517579 C1039.68093,834.517579 847.572427,806.906521 732.572427,831.906521 C617.572427,856.906521 496.78984,928.964606 384.78984,928.964606 C272.78984,928.964606 0.0118995517,776.669406 41.0118996,578.669406 C82.0118996,380.669406 221.586773,482.100972 334.586773,275.100972 C447.586773,68.1009722 434.165411,47.9396883 619.165411,47.9396883 Z',
+            // easing: 'easeOutQuad',
+            // duration: 2000,
+            // loop: true,
+            // direction: 'alternate',
+            // });
+            
+            // var morph2 = anime({
+            // targets: '.poly2',
+            // d: 'M609.154968,113.397876 C767.449386,113.397876 792.322525,159.009651 818.847536,227.461291 C845.372546,295.912932 1060.65962,248.836581 1101.7306,402.852772 C1142.80158,556.868963 1012.34874,705.790575 974.700339,705.790575 C937.051936,705.790575 753.873643,692.813727 655.47441,714.204865 C557.075177,735.596003 519.34043,876.340138 423.508134,876.340138 C327.675837,876.340138 210.927176,753.711838 246.008642,584.294027 C281.090108,414.876217 237.82743,455.485273 334.515373,278.366653 C431.203315,101.248033 450.860549,113.397876 609.154968,113.397876 Z',
+            // translateX: ('0'),
+            // translateY: ('0'),
+            // easing: 'easeOutQuad',
+            // duration: 2000,
+            // loop: true,
+            // direction: 'alternate',
+            // });
+
+            // var morph3 = anime({
+            // targets: '.poly3',
+            // d: 'M608.692344,162.147284 C743.223436,162.147284 744.310596,214.569008 766.853644,272.744616 C789.396692,330.920223 984.990962,307.24418 1019.89633,438.139297 C1054.80169,569.034413 1055.14312,710.775384 1023.14653,710.775384 C991.14995,710.775384 840.351949,803.893784 756.724513,822.073662 C673.097077,840.253539 558.55127,842.301432 477.10542,842.301432 C395.659569,842.301432 171.297307,822.701827 201.112306,678.717199 C230.927305,534.732571 191.439206,402.228131 273.612251,251.698748 C355.785297,101.169364 474.161252,162.147284 608.692344,162.147284 Z',
+            // translateX: ('0'),
+            // translateY: ('0'),
+            // easing: 'easeOutQuad',
+            // duration: 2000,
+            // loop: true,
+            // direction: 'alternate',
+            // });
+
+            // var morph4 = anime({
+            // targets: '.poly4',
+            // d: 'M613.437709,221 C720.947599,221 707.581505,279.113454 725.596675,325.604217 C743.611846,372.09498 857.506118,365.874223 885.400576,470.47844 C913.295033,575.082657 880.170365,658.184896 854.600445,658.184896 C829.030525,658.184896 680.268181,643.656533 613.437709,658.184896 C546.607237,672.713259 507.081991,707.000197 441.994922,707.000197 C376.907854,707.000197 316.47796,649.87729 340.304476,534.812651 C364.130992,419.748012 403.640043,483.2634 469.308246,362.96855 C534.976449,242.673701 505.92782,221 613.437709,221 Z',
+            // easing: 'easeOutQuad',
+            // duration: 2000,
+            // loop: true,
+            // direction: 'alternate',
+            // });
+        </script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+// COULEURS
+
+$bleu   :   #0064D7;
+$rouge  :   #C13C3C;
+
+
+// TYPOGRAPHIE
+
+h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: 1px;
+}
+
+h2 {
+    // font-size: 15vh;
+    // line-height: 15vh;
+    // text-transform: uppercase;
+    // color: $bleu;
+    // opacity: .4;
+    text-indent: -999px;
+    grid-column: 3 / 8;
+    grid-row : 2 / 3;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+html {
+    font-family: 'Futura', 'Helvetica', 'sans-serif';
+    font-weight: normal;
+    color: white;
+}
+
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: radial-gradient(circle farthest-corner at bottom right, #0E1668 0, black 100%);
+}
+
+
+
+#morphing {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 100%;
+    max-width: 100%;
+}
+
+
+// #morphing {
+//     position: absolute;
+//     top: 0;
+//     left: O;
+//     width: 100%;
+//     height: 100%;
+
+//     svg {
+//         display: block;
+//         margin: 0 auto;
+//         height: 100%;
+//         max-width: 100%;
+//     }
+// }
+
+
+.grille {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 2fr 2fr 2fr 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    overflow: hidden;
+    max-width: 2100px;
+    margin: 0 auto;
+}
+
+.titre {
+    grid-column: 3 / 8;
+    grid-row : 2 / 3;
+    max-height: 100%;
+    img {
+        max-height: 60%;
+        opacity: .7;
+    }
+}
+
+
+.liste {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+
+        .rond {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 96%;
+            height: 96%;
+            border-radius: 50%;
+            border: 2px solid white;
+            transition: all .3s;
+
+            a{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: block;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: $rouge;
+                transition: all .2s .2s ease-in;
+            }
+        }
+
+        &:hover {
+
+            .rond {
+                width: 4px;
+                height: 4px;
+            }
+
+            a {
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+}
+
+#menu {
+    li {
+        &.active {
+            .rond {
+                width: 4px;
+                height: 4px;
+            }
+
+            a {
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 568px) {
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+//IMPORTS DE FICHIERS
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import 'base.css';
+@import 'home.scss';
+@import 'realisation.scss';
+@import 'xp.scss';
+@import 'about.scss';
+@import 'projet.scss';

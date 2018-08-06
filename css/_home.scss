@@ -1,0 +1,248 @@
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding: 10px 0;
+    .headbox {
+        max-width: 2100px;
+        margin: 0 auto;
+        padding: 0 2.5%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        h1 {
+            width: 85px;
+        }
+    }
+
+    .conteneur-svg {
+        position: relative;
+        width: 320px;
+
+        &:hover .shape {
+            stroke-width: 2px;
+            stroke-dashoffset: 0;
+            stroke-dasharray: 760;
+          }
+      }
+
+      .shape {
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 6px;
+        fill: transparent;
+        stroke: $rouge;
+        border-bottom: 5px solid black;
+        transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+      }
+
+      .text {
+        line-height: 32px;
+        letter-spacing: 8px;
+        position: absolute;
+        top: 13px;
+        width: 100%;
+        text-align: center;
+      }
+
+    .contact {
+        position: relative;
+
+        button {
+            position: relative;
+            z-index: 2;
+            background-image: url(../img/old_phone.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 35px;
+            display: block;
+            cursor: pointer;
+        }
+    
+        .phone {
+            position: absolute;
+            top: 0;
+            left: 3px;
+            background-image: url(../img/phone.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+            display: block;
+            opacity: 0;
+        }
+    
+        .mail {
+            position: absolute;
+            top: 0;
+            left: 3px;
+            background-image: url(../img/mail.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 32px;
+            display: block;
+            opacity: 0;
+        }
+
+        .cv {
+            position: absolute;
+            top: 0;
+            left: -2px;
+            background-image: url(../img/cv.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 30px;
+            display: block;
+            opacity: 0;
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    height: 45%;
+    max-height: 250px;
+    margin-left: 2.5%;
+}
+
+.home {
+
+    .point {
+        position: relative;
+        grid-column: 4 / 5;
+        grid-row: 4 / 6;
+        width: 28vmin;
+        height: 28vmin;
+        align-self: center;
+        justify-self: center;
+        transform: rotateX(75deg);
+        transform-style: preserve-3d;
+        animation: orbit infinite linear;
+        
+
+        .point-rouge {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: $rouge;
+            transform: rotateX(-75deg);
+        }
+
+        span {
+            display: inline-block;
+            font-size: 15vh;
+            font-weight: bold;
+            color: $bleu;
+            position: absolute;
+        }
+
+        .cheouv {
+            position: absolute;
+            height: 65%;
+            top: 50%;
+            left: -60%;
+            transform: translateY(-50%);
+        }
+
+        .chefer {
+            position: absolute;
+            height: 65%;
+            top: 50%;
+            left: 110%;
+            transform: translateY(-50%);
+            animation: rotationf 5s ease infinite;
+        }
+
+        @keyframes orbit {
+            0%   { 
+                transform: rotateZ(0deg); 
+            }
+            100% { 
+                transform: rotateZ(-360deg); 
+            } 
+        }
+    }
+    
+    .scroll {
+        grid-column: 7 / 8;
+        grid-row: 6 / 7;
+        width: 3px;
+        height: 100%;
+        border-radius: 5px;
+        background: linear-gradient( #C13C3C 0%, #C13C3C 34%, #630b94 35%, #C13C3C 36%, #C13C3C 42%, #630b94 43%, #C13C3C 44%, #C13C3C 73%, #630b94 75%, #C13C3C 76%,#C13C3C 82%, #630b94 83%, #C13C3C 84%, #C13C3C 100%);
+        background-size: 1000% 1000%;
+
+        animation: AnimationName 8s ease infinite ;
+        
+        @keyframes AnimationName {
+            0%{background-position:50% 100%}
+            100%{background-position:50% 0%}
+            //100%{background-position:49% 0%}
+        }
+    }
+    .scrolldown {
+        grid-column: 7 / 18;
+        grid-row: 6 / 7;
+        writing-mode: vertical-lr;
+        font-size: 2.2vh;
+        margin-left: 1rem;
+        text-align: center;
+        cursor: default;
+    }
+}
+
+
+@media screen and(max-width: 568px) {
+    header {
+        a {
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+        .conteneur-svg {
+            font-size: 1.4rem;
+            letter-spacing: 6px;
+            width: 0px;
+
+            svg {
+                display: none;
+            }
+
+            .text {
+                width: 200px;
+                top: 35px;
+                left: -120px;
+
+            }
+        }
+        .contact {
+            button {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .home {
+        .titre {
+            display: flex;
+            align-items: end;
+
+            img{
+                max-height: 50%;
+                margin-bottom: -30px;
+            }
+        }
+    }
+}

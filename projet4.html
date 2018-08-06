@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portfolio de Pierre Grreillet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="projet">
+
+    <header>
+        <div class="headbox">
+            <a href="index.html"><h1>Pierre Greillet</h1></a>
+
+            <div class="conteneur-svg">
+
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="60" width="320" />
+                    <div class="text">Intégrateur Jr</div>
+                </svg>
+
+            </div>
+
+            <div class="contact" onclick="contactf()">
+
+                <button></button>
+
+                <a href="tel:0671713379" class="phone"></a>
+
+                <a href="mailto:pierre.greillet@outlook.fr" class="mail"></a>
+
+                <a href="/files/cv.pdf" class="cv"></a>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="projet_top">
+
+        <div class="background"></div>
+
+        <div class="grille_projet_top">
+
+            <h1>Récifs Coralliens</h1>
+
+            <h2>/ Présentation</h2>
+
+            <div class="pres_text">
+            <p>Le Fondation de France a financé une étude comparative sur les  savoirs et les perceptions locales des zones coralliennes incluses dans les territoires maritimes français.</p>
+            <p>Pour ce présenter ce projet de recherche, ils ont fait appels à l’agence Badak pour créer le design et gérer l’intégration.</p>
+            <p>Le design étant validé à mon arrivé, j’ai étais chargé de m‘occuper de l’intégration statique et de Wordpress.</p>
+            </div>
+
+            <div class="photo_head">
+                <img src="img/corail_acc.jpg" alt="Capture d'écran de l'accueil du site">
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="projet">
+
+        <div class="projet_photo">
+            <img src="img/CONTEXTE.jpg" alt="Capture d'écran de l'accueil du site">
+        </div>
+
+        <div class="projet_text">
+            <h2>/ Préparation</h2>
+            <p>Pour l’intégration de ce site, l'étude des maquettes a fait ressortir quelques subtilités à prendre en compte lors du passage à WordPress.</p>
+            <p>La 1ère concerne la hiérachisation, 5 sections (ou catégories avec une image de fond pour chaque) avec 3 parties dans chacune d’entre elles.</p>
+            <p>La 2è concerne le menu latéral dont le titre et la liste du dessous doit changer en fonction de la page active.</p>
+            <p>La 3è est le bouton du bas qui doit changer de couleur lorsque l’utilisateur arrive sur la 3è et dernière page de la section en cours.</p>
+            <h2>/ Intégration</h2>
+            <p>Pour cette intégration, l'environnement de travail a été composé de Visual Studio Code pour l'IDE, Prepros pour compiler les fichiers SASS, MAMP comme serveur local et LocalbyFlywheel pour le développement WordPress</p>
+            <p>Dès le départ, la mise en place de MAMP a permis de gagner du temps en séparant le Header et Footer des pages, évitant un copié/collé inutile et surtout de préparer le développement sous WP</p>
+            <p>Ensuite l'usage de SASS a clarifié l'écriture du CSS en simplifiant la séparation des différents éléments, style général, boutons, typo, pages...</p>
+            <p></p>
+            <h2>/ Développement</h2>
+            <p>Le développement sous WP a commencé par la mise en place d'un thème vierge, fournit pas underscore me.</p>
+            <p>ACF a été installé dès le départ car jugé indispensable à ce genre de projet et les différentes catégories créée dans la foulée</p>
+            <p>Il a ensuite fallu modifié les fichiers php inclus, avec l'intégration faite précédement, en intégrant les boucles acf.</p>
+            <p>Puis les 2 scripts qui gèrent le scrollto et l'affichage du menu burger ont été intégré dans le fichier function.php</p>
+            <h2>/ Déploiement</h2>
+            <p>Pour terminer le site a été mis en place sur les serveurs de production Badak pour permettre au client de prendre le site en main.</p>
+        </div>
+
+    </div>
+
+    <a href="https://corail.badak.fr" class="visiter">Visiter le site</a>
+
+    <footer>
+        <a href="https://corail.badak.fr/">Mentions Légales</a>
+        <p>2018</p>
+    </footer>
+        
+    <script type="text/javascript" src="js/contactf.js"></script>
+
+</body>
+</html>
